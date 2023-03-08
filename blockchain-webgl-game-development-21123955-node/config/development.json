@@ -1,0 +1,51 @@
+{
+  "port": 1890,
+  "hostAddress": "172.16.1.172:1890",
+  "databaseHost": "localhost",
+  "databasePort": "27017",
+  "databaseName": "blockchain-webgl-game-development-21123955-node-dev",
+  "jwtsecret": "nodejwt",
+  "jwtresetsecret": "nodejwt",
+  "nodemailer": {
+    "service": "gmail",
+    "email": "fortestingpurpose0077@gmail.com",
+    "password": "Mobiloitte@1"
+  },
+  "jwtOptions": {
+    "expiresIn": "24h"
+  },
+  "swaggerDefinition": {
+    "info": {
+      "title": "blockchain-webgl-game-development-21123955-node",
+      "version": "2.0",
+      "description": "blockchain-webgl-game-development-21123955-node"
+    },
+    "basePath": "/api/v1",
+    "securityDefinitions": {
+      "tokenauth": {
+        "type": "apiKey",
+        "name": "Authorization",
+        "in": "header"
+      }
+    }
+  },
+  "AWS": {
+    "accessKeyId": "AKIA4WJ5ARST5XSQGXWY",
+    "secretAccessKey": "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",
+    "region": "ap-south-1",
+    "smsSecret": "nodesms"
+  },
+  "cloudinary": {
+    "cloud_name": "mobiloittetech",
+    "api_key": "917389355349765",
+    "api_secret": "4LHCjazOQnnsjMZKTX5nuG5txRs"
+  },
+
+  "twilio": {
+    "accountSid": "ACf786a64203b2524f8ee2878ee632bbe7",
+    "authToken": "746861191af93561bd9de02d47a1ad26",
+    "number": "+18555728559"
+  },
+  "sendGridKey":"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"
+
+}

@@ -1,0 +1,207 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,900;1,500;1,700;1,900&display=swap");
+@font-face {
+  font-family: "Dismedia";
+  src: url("./font/Dismedia-Regular.eot");
+  src: url("./font/Dismedia-Regular.eot?#iefix") format("embedded-opentype"),
+    url("./font/Dismedia-Regular.woff2") format("woff2"),
+    url("./font/Dismedia-Regular.woff") format("woff"),
+    url("./font/Dismedia-Regular.ttf") format("truetype"),
+    url("./font/Dismedia-Regular.svg#Dismedia-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #120720;
+  color: #ffffff;
+  font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
+}
+.filter1 {
+  position: fixed;
+  left: -250px;
+  top: 50px;
+  right: auto;
+  bottom: auto;
+  z-index: 11;
+  width: 500px;
+  height: 500px;
+  border-radius: 1000px;
+  background-image: linear-gradient(45deg, #45137d, #ce19d6);
+  opacity: 0.25;
+  -webkit-filter: blur(100px);
+  filter: blur(100px);
+}
+.filter2 {
+  position: fixed;
+  right: -250px;
+  bottom: 50px;
+  z-index: 11;
+  width: 500px;
+  height: 500px;
+  border-radius: 1000px;
+  background-image: linear-gradient(45deg, #45137d, #ce19d6);
+  opacity: 0.25;
+  -webkit-filter: blur(100px);
+  filter: blur(100px);
+}
+.flex {
+  display: flex;
+  justify-content: space-around;
+}
+.blackPrice {
+  color: rgba(0, 0, 0, 0.26);
+  box-shadow: none;
+  background-color: rgba(0, 0, 0, 0.12);
+}
+.absolute {
+  position: absolute;
+  top: 0;
+}
+.blackPrice {
+  border: 1px solid #3b3b3b;
+  padding: 5px 19px;
+  border-radius: 0;
+  transform: skew(-20deg);
+}
+.walletSet {
+}
+
+.width100 {
+  width: 100%;
+}
+.slick-dots {
+  text-align: end;
+}
+.slick-dots li {
+  margin: 0;
+  width: 15px;
+}
+.slick-dots li button:before {
+  color: #176386;
+  font-size: 10px;
+}
+.sectionShow {
+  position: relative;
+  &::before {
+    content: " ";
+    position: absolute;
+    width: 100%;
+    height: 206.94px;
+    left: 0;
+    top: 0;
+    // background: linear-gradient(180deg, #171717 0%, #ececec 100%);
+    opacity: 0.1;
+    z-index: 0;
+  }
+}
+.slick-dots li.slick-active button:before {
+  color: #3e37a2 !important;
+  font-size: 10px;
+}
+.favourites {
+  background-color: rgb(255, 255, 255);
+
+  border-radius: 5px;
+  position: relative;
+  padding: 38px 15px 15px;
+  .Ticker {
+    top: 52px;
+    right: 14px;
+  }
+  &:hover {
+    box-shadow: rgba(14, 14, 14, 0.25) 0px 0px 8px 0px;
+    transition: all 0.1s ease 0s;
+    transform: translateY(-2px);
+  }
+}
+.d-flex {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &.justifyEnd {
+    justify-content: flex-end;
+  }
+}
+.listingFooter li a {
+  color: #fff;
+  display: flex;
+  text-decoration: none;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  &:hover {
+    color: #ea1546 !important;
+  }
+
+  svg {
+    margin-right: 10px;
+  }
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+.subtext h3 {
+  font-size: 48px;
+  font-weight: 400;
+  color: #fff;
+  margin-bottom: 35px;
+}
+.d-flex a h6 {
+  color: #cbcbcb !important;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.usersPic p {
+  color: #ffffff !important;
+  font-size: 15px !important;
+  text-align: center;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.TabButtonsBox button {
+  color: #fff;
+  border-bottom: 2px solid #ea1546;
+  font-weight: 500 !important;
+  font-size: 17px;
+  line-height: 54px !important;
+  padding: 6px 22px !important;
+  font-family: Roboto !important;
+  border-radius: 0;
+  border-bottom: 2px solid transparent;
+  margin-right: 4px;
+}
+
+.TabButtonsBox button span:last-child {
+  font-weight: 400;
+  padding-left: 5px;
+  color: #c8c9ca;
+}
+
+.TabButtonsBox button.active {
+  color: #fff !important;
+  border-bottom: 2px solid #ea1546;
+}
+
+.TabButtonsBox button:hover {
+  background-color: transparent;
+  color: #fff !important;
+}
+figure.user_img img {
+  width: 100%;
+  height: 100%;
+  width: 50px !important;
+  height: 50px !important;
+  border-radius: 50%;
+}

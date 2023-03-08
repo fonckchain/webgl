@@ -1,0 +1,20 @@
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1687 200" width="1687" height="200">
+	<title>Frame 4 (1)-svg</title>
+	<defs>
+		<filter x="-50%" y="-50%" width="200%" height="200%" id="f1"> <feGaussianBlur stdDeviation="13.5" /> </filter>
+		<filter x="-50%" y="-50%" width="200%" height="200%" id="f2"> <feGaussianBlur stdDeviation="2" /> </filter>
+	</defs>
+	<style>
+		tspan { white-space:pre }
+		.s0 { fill: #120720 } 
+		.s1 { filter: url(#f1);fill: none;stroke: #ec0ad7;stroke-width: 5 } 
+		.s2 { filter: url(#f2);fill: none;stroke: #1ce9e9;stroke-width: 5 } 
+	</style>
+	<path id="Layer" class="s0" d="m-2 0h1690v65.5h-194l-106.5 105.5h-1083l-105-104h-201.5v-67z" />
+	<g id="Layer">
+		<path id="Layer" class="s1" d="m1682.5 64h-192l-106.5 106.5h-1082l-106.5-106.5h-190.5" />
+	</g>
+	<g id="Layer">
+		<path id="Layer" class="s2" d="m1689.5 66h-195l-105 105h-1084l-105.5-105h-202" />
+	</g>
+</svg>

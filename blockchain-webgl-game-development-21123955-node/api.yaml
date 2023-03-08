@@ -1,0 +1,665 @@
+definitions:
+  securitySchemes:
+    tokenauth:
+      type: basic
+      description: bearer auth
+      name: Authorization
+      in: header
+    demouser:
+      type: basic
+  #-------------------------------------------------------------------
+  #---------------------------ADMIN----------------------------------
+  #-------------------------------------------------------------------
+  signup:
+    required:
+      - firstName
+      - lastName
+      - countryCode
+      - mobileNumber
+      - email
+      - password
+    properties:
+      firstName:
+        type: string
+      lastName:
+        type: string
+      countryCode:
+        type: string
+      mobileNumber:
+        type: string
+      email:
+        type: string
+      password:
+        type: string
+      deviceToken:
+        type: string
+
+
+
+    
+  addNFT:
+    required:
+      - walletAddress
+      - nfts
+    properties:
+      walletAddress:
+        type: string
+      nfts:
+        type: array
+        items: 
+         type: string    
+
+
+  addBlackMarket:
+    required:
+      - data
+    properties:
+      data:
+        type: array
+        items: 
+         type: string         
+
+
+
+
+
+  addNFT1:
+    required:
+      - collectionId
+      - tokenId
+    properties:
+      collectionId:
+        type: string
+      tokenId: 
+        type: string
+      tokenName: 
+        type: string
+      mediaFile: 
+        type: string
+      coverImage: 
+        type: string
+      itemCategory: 
+        type: string
+      priceType: 
+        type: string
+      price: 
+        type: integer
+      unlockOncePurchased: 
+        type: string
+      title: 
+        type: string
+      uri: 
+        type: string
+      description: 
+        type: string
+      properties: 
+        type: string
+      alternativeTextForNFT: 
+        type: string
+
+        
+  verifyOTP:
+    required:
+      - email
+      - otp
+    properties:
+      email:
+        type: string
+      otp:
+        type: integer
+
+
+  resendOTP:
+    required:
+      - countryCode
+      - mobileNumber
+    properties:
+      countryCode:
+        type: string
+      mobileNumber:
+        type: string
+
+
+  forgotPassword:
+    required:
+      - email
+    properties:
+      email:
+        type: string
+
+
+  resetPassword:
+    required:
+      - newPassword
+    properties:
+      newPassword:
+        type: string
+        
+
+  login:
+    required:
+      - walletAddress
+    properties:
+      walletAddress:
+        type: string
+  
+
+  loginAdmin:
+    required:
+      - email
+      - password
+    properties:
+      email:
+        type: string
+      password: 
+        type: string
+          
+
+  socialLogin:
+    required:
+      - socialId
+      - socialType
+      - countryCode
+      - mobileNumber
+      - email
+    properties:
+      socialId:
+        type: string
+      socialType:
+        type: string
+      firstName:
+        type: string
+      lastName:
+        type: string
+      countryCode:
+        type: string
+      mobileNumber:
+        type: string
+      email:
+        type: string
+      deviceToken:
+        type: string
+
+
+  connectWallet:
+    required:
+      - walletAddress
+    properties:
+      walletAddress:
+        type: string
+
+
+
+
+
+
+  updateProfile:
+    properties:
+      userName:
+        type: string
+      name:
+        type: string
+      email: 
+        type: string
+      profilePic: 
+        type: string
+      coverPic: 
+        type: string
+      bio: 
+        type: string
+      facebook: 
+        type: string
+      twitter: 
+        type: string
+      youtube: 
+        type: string
+      telegram: 
+        type: string
+
+  updateAdminProfile:
+    properties:
+      name:
+        type: string
+      email:
+        type: string
+      profilePic:
+        type: string
+
+
+
+
+         
+  # editCategory:
+  #   properties:
+  #     categoryTitle:
+  #       type: string
+  #     categoryIcon:
+  #       type: string
+       
+     
+  changePassword:
+    required:
+      - oldPassword
+      - newPassword
+    properties:
+      oldPassword:
+        type: string
+      newPassword: 
+        type: string
+
+
+  createPayment:
+    required:
+      - cardNumber
+      - expMonth
+      - expYear
+      - cvc
+    properties:
+      cardNumber:
+        type: string
+      expMonth: 
+        type: string
+      expYear: 
+        type: string
+      cvc: 
+        type: string
+
+
+  addStaticContent:
+    required:
+      - type
+      - title
+      - description
+    properties:
+      type:
+        type: string
+      title: 
+        type: string
+      description: 
+        type: string
+
+
+  editStaticContent:
+    required:
+      - _id
+      - title
+      - description
+    properties:
+      _id:
+        type: string
+      title: 
+        type: string
+      description: 
+        type: string
+
+
+  addFAQ:
+    required:
+      - question
+      - answer
+    properties:
+      question:
+        type: string
+      answer: 
+        type: string
+
+
+  editFAQ:
+    required:
+      - _id
+      - question
+      - answer
+    properties:
+      _id:
+        type: string
+      question: 
+        type: string
+      answer: 
+        type: string
+
+
+
+
+  addAnnouncement:
+    required:
+      - title
+      - description
+    properties:
+      title:
+        type: string
+      description: 
+        type: string
+
+
+  editAnnouncement:
+    required:
+      - _id
+      - title
+      - description
+    properties:
+      _id:
+        type: string
+      title: 
+        type: string
+      description: 
+        type: string
+
+
+  deleteAnnouncement:
+    required:
+      - _id
+    properties:
+      _id:
+        type: string
+
+
+
+
+
+  cancelOrder:
+    required:
+      - _id
+    properties:
+      _id:
+        type: string
+
+
+  deleteUser:
+    required:
+      - _id
+    properties:
+      _id:
+        type: string
+
+
+  deleteCategory:
+    required:
+      - _id
+    properties:
+      _id:
+        type: string
+
+
+  deleteFAQ:
+    required:
+      - _id
+    properties:
+      _id:
+        type: string 
+
+
+  blockUnblockUser:
+    required:
+      - _id
+    properties:
+      _id:
+        type: string
+
+
+  blockUnblockNft:
+    required:
+      - _id
+    properties:
+      _id:
+        type: string
+
+
+  twoFactorAuthentication:
+    required:
+      - userId
+    properties:
+      userId:
+        type: string
+      code:
+        type: string
+
+
+  editCollection:
+    required:
+      - _id
+    properties:
+      _id:
+        type: string
+      displayName: 
+        type: string
+      symbol: 
+        type: string
+      shortURL: 
+        type: string
+      description: 
+        type: string
+      collectionImage: 
+        type: string
+      categoryType: 
+        type: string
+
+
+  editNFT:
+    required:
+      - _id
+    properties:
+      _id:
+        type: string
+      tokenName: 
+        type: string
+      mediaFile: 
+        type: string
+      coverImage: 
+        type: string
+      itemCategory: 
+        type: array
+        items:
+          type: string
+      priceType: 
+        type: string
+      price: 
+        type: string
+      unlockOncePurchased: 
+        type: string
+      title: 
+        type: string
+      uri: 
+        type: string
+      description: 
+        type: string
+      royalties: 
+        type: string
+      properties: 
+        type: string
+      alternativeTextForNFT: 
+        type: string
+
+
+  createOrder:
+    required:
+      - nftId
+    properties:
+      nftId:
+        type: string
+      title: 
+        type: string
+      details: 
+        type: string
+      time: 
+        type: string
+      startingBid: 
+        type: string
+      tokenName: 
+        type: string
+      description: 
+        type: string
+      royalties: 
+        type: string
+      startPrice: 
+        type: string
+      price: 
+        type: string
+      network:
+        type: string
+      coupounAddress: 
+        type: string
+      startTime: 
+        type: string
+      endTime: 
+        type: string
+      expiryTime: 
+        type: string
+      currentOwner: 
+        type: string
+      saleType:
+        type: string
+  
+  editOrder:
+    required:
+      - _id
+    properties:
+      _id:
+        type: string
+      title: 
+        type: string
+      details: 
+        type: string
+      time: 
+        type: string
+      startingBid: 
+        type: string
+      tokenName: 
+        type: string
+      description: 
+        type: string
+      royalties: 
+        type: string
+      startPrice: 
+        type: string
+      price: 
+        type: string
+      coupounAddress: 
+        type: string
+      startTime: 
+        type: string
+      endTime: 
+        type: string
+      expiryTime: 
+        type: string
+      currentOwner: 
+        type: string
+      saleType: 
+        type: string
+  
+
+  createBid:
+    required:
+      - orderId
+    properties:
+      orderId:
+        type: string
+      name: 
+        type: string
+      bid: 
+        type: string
+      date: 
+        type: string
+      statues: 
+        type: string
+      price: 
+        type: integer
+
+  editBid:
+    required:
+      - _id
+    properties:
+      _id:
+        type: string
+      name: 
+        type: string
+      bid: 
+        type: string
+      date: 
+        type: string
+      statues: 
+        type: string
+
+
+  createActivity:
+    properties:
+      title:
+        type: string
+      desctiption: 
+        type: string
+      type: 
+        type: string
+
+
+  editActivity:
+    required:
+      - _id
+    properties:
+      title:
+        type: string
+      desctiption: 
+        type: string
+      type: 
+        type: string
+
+
+  createHistory:
+    properties:
+      title:
+        type: string
+      desctiption: 
+        type: string
+      type: 
+        type: string
+
+
+  editHistory:
+    required:
+      - _id
+    properties:
+      title:
+        type: string
+      desctiption: 
+        type: string
+      type: 
+        type: string
+
+  allListOrder:
+    properties:
+      min: 
+        type: integer
+      max: 
+        type: integer
+      page: 
+        type: integer
+      limit: 
+        type: integer
+      network: 
+        type: array
+        items:
+          type: string 
+      itemCategory: 
+        type: array
+        items:
+          type: string
+      collection: 
+        type: array
+        items:
+          type: string
+
+
+  showActivity:
+    properties:
+      _id: 
+        type: string
+      search: 
+        type: string
+      page: 
+        type: integer
+      limit: 
+        type: integer
+      type: 
+        type: array
+        items:
+          type: string
+
+  
